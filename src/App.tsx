@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Routes from './Routes';
+
+import Header from './components/header/Header';
+import Silhouette from './components/main/Silhouette';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="text-bg-dark">
+			<div className="cScreen">
+				<Header />
+
+				<div className="container text-center cGameScreen" style={{paddingTop: '25px'}}>
+					<div className="row justify-content-md-center">
+						<div className="col col-4">
+							<Silhouette />
+						</div>
+						<div className="col col-8">
+							<Routes />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	);
 }
 
 export default App;
